@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'sessions#login'
   resources :users
   get '/login', to: 'sessions#login'
   post '/login', to: 'sessions#login'
