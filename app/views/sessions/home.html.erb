@@ -1,2 +1,28 @@
-<h3>You are logged in</h3>
-<%= @current_user.email %>
+<div class="page-header">
+<div>
+<p class="text-center">Profile</p>
+<h3 class="text-center"><%= @current_user.email %></h3>
+</div>
+</div>
+
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Add</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Log</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="progress-tab" data-toggle="tab" href="#progress" role="tab" aria-controls="progress" aria-selected="false">Progress</a>
+  </li>
+    <li class="nav-item" role="presentation">
+    <a class="nav-link" id="details-tab" data-toggle="tab" href="#details" role="tab" aria-controls="details" aria-selected="false">Details</a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">Add</div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+  <div class="tab-pane fade" id="progress" role="tabpanel" aria-labelledby="progress-tab">...</div>
+  <div class="tab-pane fade" id="details" role="tabpanel" aria-labelledby="contact-tab">Details</div>
+</div>
