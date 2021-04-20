@@ -1,6 +1,19 @@
+<div class="p-3">
+
 <h2>Workout Plans</h2>
 
-<% @plans.each do |plan| %>
-    <h6><%= plan.title %></h6>
+<div class="row m-0 p-0">
+   <% @plans.each do |plan| %>
+  <div class="col-12 col-md-6 pb-3 px-0">
+      <div class="add-container" >
+           <h6><%= plan.title %></h6>
     <p><%= plan.body %></p>
+    <button class="main-button">Go To</button>
+      </div>
+    </div>
 <% end %>
+  </div>
+
+
+
+</div>

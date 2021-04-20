@@ -7,6 +7,5 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#login'
   get '/logout', to: 'sessions#logout'
   get '/home', to: 'sessions#home'
-  
 
 end
