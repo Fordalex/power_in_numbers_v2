@@ -15,13 +15,16 @@
     <%= form.label :title %>
     <%= form.text_field :title, class: "form-control" %>
   </div>
+  <hr/>
 
-  <div  class="form-group">
-      <%= form.label :body %>
-      <%= form.text_area :body, class: "form-control" %>
-  </div>
+  <div id="exerciseFormContainer"></div>
+
+ 
+  <button type="button" class="btn btn-success w-100" id="addExerciseButtonTimed" onclick="addExerciseRow()">Add Exercise Timed</button>
+  <button type="button" class="btn btn-warning w-100 my-3 " id="addExerciseButtonReps">Add Exercise Repetitions</button>
+
 
   <div class="actions">
-    <%= form.submit "Create Plan", class: "main-button" %>
+    <%= form.submit "Finished", class: "main-button" %>
   </div>
 <% end %>

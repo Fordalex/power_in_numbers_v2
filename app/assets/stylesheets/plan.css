@@ -1,0 +1,19 @@
+.create-plan-table tr th:first-child {
+    width: 45%;
+}
+
+.create-plan-table th {
+    background-image: linear-gradient(#89c3e7, #69add6);
+    border: solid #6b6e9a 1px;
+}
+
+.create-plan-table tr:nth-child(odd) {
+    background-color: rgb(240, 240, 240);
+}
+
+.create-plan-table tr td input {
+    width: 100%; 
+    border: none;
+    background-color: transparent;
+}
+
