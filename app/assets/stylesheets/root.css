@@ -58,7 +58,7 @@ p,a,li,button,span,label {
     border-radius: 0.25rem;
     color: white;
     width: 100%;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.05);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.03);
 }
 
 .secondary-button {
@@ -77,7 +77,7 @@ p,a,li,button,span,label {
     border-radius: 0.25rem;
     color: var(--themeColour);
     width: 100%;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.05);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.03);
 }
 
 .alert {
