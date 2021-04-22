@@ -1,17 +1,35 @@
-var exerciseFormContainer = document.getElementById('exerciseFormContainer');
-var addExerciseButton = document.getElementById('addExerciseButton');
-var exerciseCount = 0;
+window.addEventListener("load", (event) => {
 
-function updateFormInput() {
-    console.log('button pressed')
+  var exerciseFormContainer = document.getElementById("exerciseFormContainer");
+  var addExerciseButton = document.getElementById("addExerciseButton");
+  var exerciseCount = 0;
+
+  function updateFormInput() {
+    console.log("button pressed");
     var timedButton = document.getElementById(`timedButton-${exerciseCount}`);
-    var repsButton = document.getElementById(`repsButton-${exerciseCount}`); 
-}
+    var repsButton = document.getElementById(`repsButton-${exerciseCount}`);
+    var timedOrRepsContainer = document.getElementById('timedOrRepsContainer');
+    var id = this.id.split('-')[0]
 
-function addExerciseRow() {
+    if (id == "timedbutton") {
+        var form = `
+        <div class="form-group">
+            <label>Time (Secs)</label>
+            <input type="number" name="time-${exerciseCount}">
+        </div>
+        `
+    } else {
+        var form = `
+        <div class="form-group">
+            <label>Reps</label>
+            <input type="number" name="reps-${exerciseCount}">
+        </div>
+        `
+    }
+    timedOrRepsContainer.innerHTML = form;
+  }
 
-    console.log('addExerciseRow function');
-
+  function addExerciseRow() {
     exerciseCount++;
 
     var exerciseForm = `<div>
@@ -48,21 +66,21 @@ function addExerciseRow() {
         <input type="number" name="rest-${exerciseCount}">
     </div>
     <b>Column: ${exerciseCount}</b>
+    <hr/>
     </div>`;
 
     exerciseFormContainer.innerHTML = exerciseForm;
 
-
     var timedButton = document.getElementById(`timedbutton-${exerciseCount}`);
     var repsButton = document.getElementById(`repsbutton-${exerciseCount}`);
 
-    console.log('working')
-    console.log(timedButton, repsButton)
+    console.log("working");
+    console.log(timedButton, repsButton);
 
-    timedButton.addEventListener('click', updateFormInput);
-    repsButton.addEventListener('click', updateFormInput);
+    timedButton.addEventListener("click", updateFormInput);
+    repsButton.addEventListener("click", updateFormInput);
+  }
 
+  addExerciseButton.addEventListener("click", addExerciseRow);
+});
 
-}
-
-addExerciseButton.addEventListener('click', addExerciseRow)
